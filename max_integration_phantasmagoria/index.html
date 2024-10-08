@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phantasmagoria with MAX MIDI Control</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/webmidi@3.0.0/dist/iife/webmidi.iife.min.js"></script>
+</head>
+<body>
+ 
+    <main>
+    </main>
+    <script src="sketch.js"></script>
+    <script src="keypresses.js"></script>
+    <script src="circles.js"></script>
+    <script src="rectangles.js"></script>
+    <script src="misc.js"></script>
+    <script src="triangle.js"></script>
+     <script src="alterations.js"></script>
+    <script src="lines.js"></script>
+    <script src="midi_stuff.js"></script>
+    
+    <script src="preload.js"></script>
+
+
+
+
+  <script>
+    
+    let angleX = 0;
+    let angleY = 0;
+    let boxSize = 100;
+
+    // Initialize WebMIDI
+    WebMidi.enable()
+      .then(onEnabled)
+      .catch(err => console.error("WebMIDI could not be enabled", err));
+      function onEnabled() {
+  // Check if there are any MIDI input devices
+  if (WebMidi.inputs.length < 1) {
+    console.log("No MIDI input devices detected.");
+  } else {
+    console.log("MIDI devices detected.");
+
+    // Listen for incoming MIDI messages on all devices
+    WebMidi.inputs.forEach(input => {
+      input.addListener('controlchange', "all", onControlChange);
+      input.addListener('noteon', "all", onNoteOn);
+    });
+  }
+}
+
+
+  </script>
+</body>
+</html>
