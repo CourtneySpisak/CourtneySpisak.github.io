@@ -1352,8 +1352,12 @@ background-color: #0B005A;
 	
 }
 
+
 .bg {
-background-color: #0B005A;
+    
+
+background-image: linear-gradient(to bottom, #5b648f,#0B005A);
+/*background-color: #0B005A;*/
 	height: 1600px;
 	display: block;
 	margin-left: auto;
@@ -1657,6 +1661,7 @@ background-color: #0B005A;
 }
 
 .bg {
+background-image: linear-gradient(to bottom, #5b648f,#0B005A);
 background-color: #0B005A;
 	height: 1600px;
 	display: block;
@@ -1957,6 +1962,7 @@ background-color: #0B005A;
 }
 
 .bg {
+background-image: linear-gradient(to bottom, #5b648f,#0B005A);
 background-color: #0B005A;
 	height: 1600px;
 	display: block;
