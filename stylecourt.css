@@ -563,6 +563,10 @@ div.flexibl {
 		width: 1400px;
 		height: 787.5px;
 	}
+    #shingle{
+        width 1400px;
+        height: 787.5px
+    }
 	#cel {
 		width: 1500px;
 		height: 1500px;
@@ -604,6 +608,8 @@ div.flexibl {
 		align-content: center;
 			text-align:center;
 	}
+  
+    
 	.succulent{ 
 	font-size: 70px;
 	color: white;
@@ -695,9 +701,9 @@ div.flexibl {
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 16px 1200px;
   text-decoration: none;
-width: 8%;
+width: 9%;
 }
 .home  {
 	display: block;
