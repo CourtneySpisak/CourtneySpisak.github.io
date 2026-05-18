@@ -9,6 +9,20 @@
 <meta charset="UTF-8">
 <title>Courtney Spisak Home</title>
 <link href="stylecourt.css" rel="stylesheet" type="text/css">
+<script>
+function buttonHover() {
+  var dd = document.querySelector('.dropdown-content');
+  if (!dd) return;
+  dd.style.display = (dd.style.display === 'block') ? '' : 'block';
+}
+// close dropdown when clicking outside
+window.addEventListener('click', function(e){
+  if (!e.target.closest('.dropdown') && !e.target.closest('#dropbtn')) {
+    var d = document.querySelector('.dropdown-content');
+    if (d) d.style.display = '';
+  }
+});
+</script>
 </head>
 
 <body>
@@ -43,6 +57,7 @@
          <h3 class="drophead">3D Models and Animations</h3> 
         <ul>
           <li class="smalllist" ><a href="applieances.html" target="_self">The AppLIEances</a></li>
+           <li class="smalllist"><a href="MythOMarge.html" target="_self">The Myth of Margery</a></li>
           <li class="smalllist" ><a href="clown.html" target="_self">Don't Be Down, Try Clowning Around</a></li>
           <li class="smalllist"><a href="robot.html" target="_self">Robot</a></li>
 			<li class="smalllist"><a href="roommodel.html" target="_self">Room Model</a></li>
@@ -102,6 +117,19 @@
 </div> 
 
 	<div class="galbox3">
+    <div class="gallgall" > 
+     
+            <a class="link" href="MythOMarge.html"> <!-- i will add this link_when it is complete -->
+   <img src="mom_photos/TMoM_1.png"
+               alt="room"
+               title="The Myth of Margery"
+        class= "row1"
+               id="room"> 
+            <div class="des">
+           The Myth of Margery
+            </div>
+              </a>
+    </div>
 	<div class="gallgall" > 
      
             <a class="link" href="Shingles.html"> <!-- i will add this link_when it is complete -->
@@ -115,20 +143,7 @@
             </div>
               </a>
     </div>
-           <div class="gallgall">
-             
-      
-             <a class="link" href="clown.html">
-   <img src="clown.png"
-               alt="robot"
-               title="Robot Model"
-        class="row1"
-        id="robot">
-            <div class="des">
-            Don't Be Down, Try Clowning Around
-            </div>
-               </a>
-      </div>
+          
       <div class="gallgall">
         
     
@@ -159,20 +174,21 @@
             </div>
               </a>
     </div>
-           <div class="gallgall">
+     <div class="gallgall">
              
       
-             <a class="link" href="applieances.html">
-   <img src="appliance_img.png"
-               alt="succulent"
-               title="Succulent Madness"
-        class="row3"
-        id="succ">
+             <a class="link" href="clown.html">
+   <img src="clown.png"
+               alt="robot"
+               title="Robot Model"
+        class="row1"
+        id="robot">
             <div class="des">
-            The AppLIEances
+            Don't Be Down, Try Clowning Around
             </div>
                </a>
       </div>
+          
       <div class="gallgall">
         
     
@@ -202,6 +218,20 @@
             </div>
               </a>
     </div>
+     <div class="gallgall">
+             
+      
+             <a class="link" href="applieances.html">
+   <img src="appliance_img.png"
+               alt="succulent"
+               title="Succulent Madness"
+        class="row3"
+        id="succ">
+            <div class="des">
+            The AppLIEances
+            </div>
+               </a>
+      </div>
       <div class="gallgalll">
              
       
